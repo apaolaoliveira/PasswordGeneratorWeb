@@ -10,5 +10,48 @@
   <title>Password Generator</title>
 </head>
 <body>
+  <main aria-labelledby="title">
+    <img src="src/assets/locker.svg" alt="Desenho de um cadeado verde">
+    <h1 id="title">Gerar senha</h1>
+
+    <section id="password-container">
+      <span id="password"></span>
+      <button id="copy">
+        <i class="fa-solid fa-copy"></i>
+      </button>
+    </section>
+
+    <section id="password-items">
+      <div class="item">
+        <input id="size" name="size" type="number">
+        <label for="size">Quantidade de caracteres</label>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" name="include-uppercase" id="include-uppercase">
+        <label for="include-uppercase">Incluir letra maiúscula</label>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" name="include-lowercase" id="include-lowercase">
+        <label for="include-lowercase">Incluir letra minúscula</label>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" name="include-number" id="include-number">
+        <label for="include-number">Incluir número</label>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" name="include-special-char" id="include-special-char">
+        <label for="include-special-char">Incluir caractere especial</label>
+      </div>
+
+      <button id="generate">
+        Gerar senha
+        <i class="fa-solid fa-key"></i>
+      </button>
+    </section>
+  </main>
 </body>
 </html>
