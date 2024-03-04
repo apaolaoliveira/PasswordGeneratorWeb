@@ -11,11 +11,11 @@
 </head>
 <body>
   <main aria-labelledby="title">
-    <img src="src/assets/locker.svg" alt="Desenho de um cadeado verde">
+    <img id="loker-img" src="src/assets/locker.svg" alt="Desenho de um cadeado verde">
     <h1 id="title">Gerar senha</h1>
 
     <section id="password-container">
-      <span id="password"></span>
+      <span id="password">asdfs</span>
       <button id="copy">
         <i class="fa-solid fa-copy"></i>
       </button>
@@ -47,8 +47,7 @@
         <label for="include-special-char">Incluir caractere especial</label>
       </div>
 
-      <button id="generate">
-        Gerar senha
+      <button id="generate" title="Gerar senha" aria-label="Gerar senha">       
         <i class="fa-solid fa-key"></i>
       </button>
     </section>

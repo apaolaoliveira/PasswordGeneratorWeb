@@ -34,8 +34,8 @@ main {
   gap: 1.2rem;
 }
 
-main img {
-  width: 100%;
+#loker-img {
+  width: 100px;
 }
 
 #title {
@@ -75,4 +75,48 @@ main img {
 
 #copy:hover {
   color: var(--primary-2);
+}
+
+#password-items {
+  width: 400px;
+  background-color: var(--neutral-2);
+  color: var(--neutral-1);
+  border-radius: .8rem;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  padding: 1.8rem;
+}
+
+.item {
+  display: flex;
+  gap: 1.4rem;
+}
+
+#size {
+  width: 100px;
+  text-align: center;
+  border: none;
+  border-radius: .4rem;
+}
+
+#size::-webkit-inner-spin-button,
+#size::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+#size:focus {
+  outline: .1rem solid var(--primary-1);
+}
+
+#generate {
+  background-color: var(--primary-1);
+  border: none;
+  margin-top: 1.2rem;
+  padding: 1rem 0;
+  border-radius: .4rem;
+  color: var(--neutral-3);
+  font-size: 2rem;
+  font-weight: 500;
+  cursor: pointer;
 }
