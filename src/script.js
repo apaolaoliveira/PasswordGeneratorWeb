@@ -7,8 +7,9 @@ class PasswordGenerator {
       const size = this.getPasswordSize();
       const charTypes = this.getCharTypes();
       const passwordGenerated = this.generatePassword(size, charTypes);
-      
+
       this.passwordField.textContent = passwordGenerated;
+      this.passwordField.classList.add('generated');
     });
   }
 

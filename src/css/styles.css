@@ -62,6 +62,13 @@ main {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #aab3a0a6;
+  user-select: none;
+}
+
+#password.generated {
+  color: var(--neutral-1);
+  user-select: text;
 }
 
 #copy {
