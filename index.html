@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet" href="src/styles.css">
+  <link rel="stylesheet" href="src/css/styles.css">
   <script src="src/script.js" defer></script>
   <title>Password Generator</title>
 </head>
@@ -15,7 +15,7 @@
     <h1 id="title">Gerar senha</h1>
 
     <section id="password-container">
-      <span id="password">asdfs</span>
+      <span id="password">password</span>
       <button id="copy">
         <i class="fa-solid fa-copy"></i>
       </button>
@@ -27,23 +27,47 @@
         <label for="size">Quantidade de caracteres</label>
       </div>
 
-      <div class="item">
+      <div class="checkbox-wrapper">
         <input type="checkbox" name="include-uppercase" id="include-uppercase">
+        <label for="include-uppercase" class="check">
+          <svg width="18px" height="18px" viewBox="0 0 18 18">
+            <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+            <polyline points="1 9 7 14 15 4"></polyline>
+          </svg>
+        </label>
         <label for="include-uppercase">Incluir letra maiúscula</label>
       </div>
 
-      <div class="item">
+      <div class="checkbox-wrapper">
         <input type="checkbox" name="include-lowercase" id="include-lowercase">
+        <label for="include-lowercase" class="check">
+          <svg width="18px" height="18px" viewBox="0 0 18 18">
+            <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+            <polyline points="1 9 7 14 15 4"></polyline>
+          </svg>
+        </label>
         <label for="include-lowercase">Incluir letra minúscula</label>
       </div>
 
-      <div class="item">
+      <div class="checkbox-wrapper">
         <input type="checkbox" name="include-number" id="include-number">
+        <label for="include-number" class="check">
+          <svg width="18px" height="18px" viewBox="0 0 18 18">
+            <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+            <polyline points="1 9 7 14 15 4"></polyline>
+          </svg>
+        </label>
         <label for="include-number">Incluir número</label>
       </div>
 
-      <div class="item">
+      <div class="checkbox-wrapper">
         <input type="checkbox" name="include-special-char" id="include-special-char">
+        <label for="include-special-char" class="check">
+          <svg width="18px" height="18px" viewBox="0 0 18 18">
+            <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+            <polyline points="1 9 7 14 15 4"></polyline>
+          </svg>
+        </label>
         <label for="include-special-char">Incluir caractere especial</label>
       </div>
 
