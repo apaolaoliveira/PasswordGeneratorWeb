@@ -46,15 +46,15 @@ main {
 }
 
 #password-container {
-  width: 100%;
-  max-width: 40rem;
+  width: 450px;
+  max-width: 45rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--neutral-2);
   color: var(--neutral-1);
   border-radius: .8rem;
-  padding: .8rem 1.8rem;
+  padding: 1rem 1.8rem;
 }
 
 #password {
@@ -79,7 +79,7 @@ main {
 }
 
 #password-items {
-  width: 400px;
+  width: 450px;
   background-color: var(--neutral-2);
   color: var(--neutral-1);
   border-radius: .8rem;
@@ -87,14 +87,17 @@ main {
   flex-direction: column;
   gap: .8rem;
   padding: 1.8rem;
+  font-size: 1.8rem;
 }
 
-
 #size {
-  width: 100px;
+  width: 130px;
+  color: var(--primary-1);
+  background-color: transparent;
+  border: .1rem solid white;
   text-align: center;
-  border: none;
   border-radius: .4rem;
+  font-size: 1.8rem;
 }
 
 #size::-webkit-inner-spin-button,
