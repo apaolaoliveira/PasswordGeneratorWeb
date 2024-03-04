@@ -1,9 +1,14 @@
 class PasswordGenerator {
-  generatePassword = document.querySelector('#generate');
+  generateButton = document.querySelector('#generate');
+  passwordField = document.querySelector('#password');
   
   constructor() {
-    this.generatePassword.addEventListener('click', () => {
-      this.getCharTypes();
+    this.generateButton.addEventListener('click', () => {
+      const size = this.getPasswordSize();
+      const charTypes = this.getCharTypes();
+      const passwordGenerated = this.generatePassword(size, charTypes);
+      
+      this.passwordField.textContent = passwordGenerated;
     });
   }
 
@@ -24,6 +29,31 @@ class PasswordGenerator {
     if (specialChar) charTypes.push('!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~');
 
     return charTypes;
+  }
+
+  getPasswordSize(){
+    const size = document.querySelector('#size').value;
+
+    if(isNaN(size) || size < 5 || size > 120) {
+      alert('Tamanho inválido, digite um número entre 5 e 120')
+    }
+
+    return size;
+  }
+
+  randomChar(charTypes) {
+    const randomIndex = Math.floor(Math.random() * charTypes.length);
+    return charTypes[randomIndex][Math.floor(Math.random() * charTypes[randomIndex].length)];
+  }
+
+  generatePassword(size, charTypes){
+    let passwordGenerated = '';
+
+    while (passwordGenerated.length < size) {
+      passwordGenerated += this.randomChar(charTypes);
+    }
+
+    return passwordGenerated;
   }
 }
 
