@@ -39,11 +39,17 @@ class PasswordGenerator {
     
     if (specialChar) charTypes.push('!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~');
 
+    if(!charTypes.length) 
+      return this.message('Selecione um tipo de caractere!', 'danger');
+
     return charTypes;
   }
 
   getPasswordSize(){
     const size = document.querySelector('#size').value;
+
+    if(isNaN(size) || size < 5 || size > 120) 
+      return this.message('Tamanho inválido, digite um número entre 5 e 120!', 'danger');
 
     return size;
   }
@@ -61,6 +67,19 @@ class PasswordGenerator {
     }
 
     return passwordGenerated;
+  }
+
+  message(text, status) {
+    Toastify({
+      text: text,
+      duration: 3000,
+      close: true,
+      stopOnFocus: true, 
+      style: {
+        background: status == 'success'? '#84cc16' : '#dc2626',
+        boxShadow: 'none'
+      }
+    }).showToast();
   }
 }
 
