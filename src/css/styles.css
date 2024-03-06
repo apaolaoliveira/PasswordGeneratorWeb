@@ -58,7 +58,7 @@ main {
 }
 
 #password {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -122,8 +122,11 @@ main {
   margin-top: 1.2rem;
   padding: 1rem 0;
   border-radius: .4rem;
-  color: var(--neutral-3);
   font-size: 2rem;
   font-weight: 500;
   cursor: pointer;
+}
+
+#generate i {
+  color: var(--neutral-3);
 }

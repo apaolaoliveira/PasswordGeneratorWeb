@@ -1,15 +1,25 @@
 class PasswordGenerator {
   generateButton = document.querySelector('#generate');
-  passwordField = document.querySelector('#password');
+  copyButton = document.querySelector('#copy');
+  password = document.querySelector('#password');
   
   constructor() {
+    this.addListeners();
+  }
+
+  addListeners() {
     this.generateButton.addEventListener('click', () => {
       const size = this.getPasswordSize();
       const charTypes = this.getCharTypes();
+    
       const passwordGenerated = this.generatePassword(size, charTypes);
+      this.password.textContent = passwordGenerated;
+      this.password.classList.add('generated');        
+    });
 
-      this.passwordField.textContent = passwordGenerated;
-      this.passwordField.classList.add('generated');
+    this.copyButton.addEventListener('click', () => {
+      navigator.clipboard.writeText(this.password.textContent);
+      this.message('Senha copiada com sucesso', 'success');
     });
   }
 
@@ -34,10 +44,6 @@ class PasswordGenerator {
 
   getPasswordSize(){
     const size = document.querySelector('#size').value;
-
-    if(isNaN(size) || size < 5 || size > 120) {
-      alert('Tamanho inválido, digite um número entre 5 e 120')
-    }
 
     return size;
   }
